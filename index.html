@@ -11,6 +11,7 @@
         crossorigin="anonymous"
     >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="style.css">
     <title>Frontend Bootcamp</title>
 </head>
@@ -283,6 +284,7 @@
         </div>
     </section>
 
+    <!-- Instructors -->
     <section id="instructors" class="p-5 bg-primary">
         <div class="container">
             <h2 class="text-center text-white">
@@ -316,11 +318,11 @@
                     <div class="card bg-light">
                         <div class="card-body text-center">
                             <img 
-                                src="https://randomuser.me/api/portraits/men/11.jpg" 
+                                src="https://randomuser.me/api/portraits/women/14.jpg" 
                                 class="rounded-circle mb-3"
                                 alt="">
                             <h3 class="card-title mb-3">
-                                John Smith
+                                Kelly Hall
                             </h3>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta odio sequi facere tempore ratione mollitia.
@@ -336,11 +338,11 @@
                     <div class="card bg-light">
                         <div class="card-body text-center">
                             <img 
-                                src="https://randomuser.me/api/portraits/men/11.jpg" 
+                                src="https://randomuser.me/api/portraits/men/10.jpg" 
                                 class="rounded-circle mb-3"
                                 alt="">
                             <h3 class="card-title mb-3">
-                                John Smith
+                                Chris Jones
                             </h3>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta odio sequi facere tempore ratione mollitia.
@@ -356,11 +358,11 @@
                     <div class="card bg-light">
                         <div class="card-body text-center">
                             <img 
-                                src="https://randomuser.me/api/portraits/men/11.jpg" 
+                                src="https://randomuser.me/api/portraits/women/3.jpg" 
                                 class="rounded-circle mb-3"
                                 alt="">
                             <h3 class="card-title mb-3">
-                                John Smith
+                                Jessica Davis
                             </h3>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta odio sequi facere tempore ratione mollitia.
@@ -376,10 +378,69 @@
         </div>
     </section>
 
+    <!-- Contact & Map -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">
+                        Contact Info
+                    </h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Main Location:</span>
+                                50 Main Street Dallas, TX
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Phone Number:</span>
+                                (800) 675-4396
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Email Address:</span>
+                                contact@frontendbootcamp.com
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Follow Us:</span>
+                            <a href="#" class="i bi bi-facebook text-dark mx-1"></a>
+                            <a href="#" class="i bi bi-instagram text-dark mx-1"></a>
+                            <a href="#" class="i bi bi-linkedin text-dark mx-1"></a>
+                            <a href="#" class="i bi bi-twitter text-dark mx-1"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="conatiner">
+            <p class="lead">
+                Copyright &copy; 2021 Frontend Bootcamp
+            </p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
+    
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
         crossorigin="anonymous">
+    </script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYm9iZmRldiIsImEiOiJja3dyN2Y2a2swYnN3Mm5xcWg5OGNvZWtwIn0.bzqPlYkaUFSgJmCceIpAmw';
+            const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [-96.790754, 32.780747], // starting position [lng, lat]
+            zoom: 16 // starting zoom
+            });
     </script>
 </body>
 </html>
